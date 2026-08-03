@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b3wvdrtq57xg7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0y1c2"]
+bg_color = Color(1.0829419e-07, 0.052738816, 0.08234843, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0y1c2"]
+font_size = 64
+
+[node name="Control" type="Control" unique_id=326835840]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=787549635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0y1c2")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=452995297]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Test"
+label_settings = SubResource("LabelSettings_0y1c2")
