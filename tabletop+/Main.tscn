@@ -1,85 +1,74 @@
-[gd_scene format=3 uid="uid://b3wvdrtq57xg7"]
+[gd_scene format=3 uid="uid://cajl7jp75tohy"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
 bg_color = Color(0.0509804, 0.0627451, 0.0901961, 1)
 corner_radius_top_left = 28
 corner_radius_top_right = 28
 corner_radius_bottom_right = 28
 corner_radius_bottom_left = 28
-content_margin_left = 18
-content_margin_top = 18
-content_margin_right = 18
-content_margin_bottom = 18
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
 bg_color = Color(0.101961, 0.121569, 0.168627, 1)
-corner_radius_top_left = 22
-corner_radius_top_right = 22
-corner_radius_bottom_right = 22
-corner_radius_bottom_left = 22
-content_margin_left = 18
-content_margin_top = 18
-content_margin_right = 18
-content_margin_bottom = 18
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nav"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
 bg_color = Color(0.0901961, 0.105882, 0.145098, 1)
 corner_radius_top_left = 22
 corner_radius_top_right = 22
 corner_radius_bottom_right = 22
 corner_radius_bottom_left = 22
-content_margin_left = 12
-content_margin_top = 10
-content_margin_right = 12
-content_margin_bottom = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nav_active"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
 bg_color = Color(0.180392, 0.278431, 0.54902, 1)
 corner_radius_top_left = 22
 corner_radius_top_right = 22
 corner_radius_bottom_right = 22
 corner_radius_bottom_left = 22
-content_margin_left = 12
-content_margin_top = 10
-content_margin_right = 12
-content_margin_bottom = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_action"]
-bg_color = Color(0.2, 0.5, 0.93, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-content_margin_left = 16
-content_margin_top = 14
-content_margin_right = 16
-content_margin_bottom = 14
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_action_hover"]
-bg_color = Color(0.266667, 0.584314, 1, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-content_margin_left = 16
-content_margin_top = 14
-content_margin_right = 16
-content_margin_bottom = 14
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_label_card"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_module"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
 bg_color = Color(0.137255, 0.156863, 0.211765, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-content_margin_left = 16
-content_margin_top = 12
-content_margin_right = 16
-content_margin_bottom = 12
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
-[node name="Root" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_module_hover"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.180392, 0.211765, 0.278431, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Root" type="Control" unique_id=475963773]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,7 +77,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1514960680]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,7 +86,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0392157, 0.0509804, 0.0745098, 1)
 
-[node name="SafeMargin" type="MarginContainer" parent="."]
+[node name="SafeMargin" type="MarginContainer" parent="." unique_id=1076345195]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -105,45 +94,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 48
+theme_override_constants/margin_top = 28
 theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_bottom = 22
 
-[node name="Shell" type="VBoxContainer" parent="SafeMargin"]
+[node name="Shell" type="VBoxContainer" parent="SafeMargin" unique_id=1319148860]
 layout_mode = 2
-theme_override_constants/separation = 18
+theme_override_constants/separation = 12
 alignment = 1
 
-[node name="Header" type="PanelContainer" parent="SafeMargin/Shell"]
+[node name="Header" type="PanelContainer" parent="SafeMargin/Shell" unique_id=1569537497]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
 
-[node name="HeaderVBox" type="VBoxContainer" parent="SafeMargin/Shell/Header"]
+[node name="HeaderVBox" type="VBoxContainer" parent="SafeMargin/Shell/Header" unique_id=1269449802]
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="Title" type="Label" parent="SafeMargin/Shell/Header/HeaderVBox"]
+[node name="Title" type="Label" parent="SafeMargin/Shell/Header/HeaderVBox" unique_id=1426336820]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 36
 text = "Tabletop+"
 horizontal_alignment = 1
 vertical_alignment = 1
-theme_override_font_sizes/font_size = 42
-theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
 
-[node name="Subtitle" type="Label" parent="SafeMargin/Shell/Header/HeaderVBox"]
+[node name="Subtitle" type="Label" parent="SafeMargin/Shell/Header/HeaderVBox" unique_id=819910423]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.701961, 0.745098, 0.835294, 1)
+theme_override_font_sizes/font_size = 15
 text = "Scorekeeper - House Rules - Replayable play"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-theme_override_font_sizes/font_size = 18
-theme_override_colors/font_color = Color(0.701961, 0.745098, 0.835294, 1)
 
-[node name="Pages" type="Control" parent="SafeMargin/Shell"]
+[node name="Pages" type="Control" parent="SafeMargin/Shell" unique_id=98198743]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HomePage" type="VBoxContainer" parent="SafeMargin/Shell/Pages"]
+[node name="HomePage" type="VBoxContainer" parent="SafeMargin/Shell/Pages" unique_id=2013827366]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -152,96 +141,43 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
 
-[node name="HomeCard" type="PanelContainer" parent="SafeMargin/Shell/Pages/HomePage"]
+[node name="HomeIntro" type="PanelContainer" parent="SafeMargin/Shell/Pages/HomePage" unique_id=628643881]
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="HomeCardVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeCard"]
+[node name="HomeIntroVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeIntro" unique_id=1765016539]
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 6
 
-[node name="HomeTag" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox"]
+[node name="HomeIntroTitle" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeIntro/HomeIntroVBox" unique_id=347019495]
 layout_mode = 2
-text = "Today"
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(0.643137, 0.729412, 1, 1)
-
-[node name="HomeHeadline" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox"]
-layout_mode = 2
-text = "Score tracker foundation"
-autowrap_mode = 2
-theme_override_font_sizes/font_size = 28
 theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Game Library"
+horizontal_alignment = 1
 
-[node name="HomeBody" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox"]
+[node name="HomeIntroBody" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeIntro/HomeIntroVBox" unique_id=483808391]
 layout_mode = 2
-text = "Add your game, track rounds, and keep score here later. For now this is the clean starting point for the app UI."
-autowrap_mode = 2
-theme_override_font_sizes/font_size = 17
 theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
+theme_override_font_sizes/font_size = 14
+text = "Tap a game module to open its profile, then jump into rules, scoreboard, or remix screens."
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="StatsRow" type="HBoxContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox"]
+[node name="HomeScroll" type="ScrollContainer" parent="SafeMargin/Shell/Pages/HomePage" unique_id=1007331532]
 layout_mode = 2
-theme_override_constants/separation = 10
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 
-[node name="Stat1" type="PanelContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow"]
+[node name="HomeGrid" type="GridContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeScroll" unique_id=1406158996]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_label_card")
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 2
 
-[node name="Stat1VBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow/Stat1"]
-layout_mode = 2
-theme_override_constants/separation = 4
-
-[node name="Stat1Value" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow/Stat1/Stat1VBox"]
-layout_mode = 2
-text = "0"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 28
-theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
-
-[node name="Stat1Label" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow/Stat1/Stat1VBox"]
-layout_mode = 2
-text = "Sessions"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 15
-theme_override_colors/font_color = Color(0.717647, 0.760784, 0.843137, 1)
-
-[node name="Stat2" type="PanelContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_label_card")
-
-[node name="Stat2VBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow/Stat2"]
-layout_mode = 2
-theme_override_constants/separation = 4
-
-[node name="Stat2Value" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow/Stat2/Stat2VBox"]
-layout_mode = 2
-text = "0"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 28
-theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
-
-[node name="Stat2Label" type="Label" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox/StatsRow/Stat2/Stat2VBox"]
-layout_mode = 2
-text = "Players"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 15
-theme_override_colors/font_color = Color(0.717647, 0.760784, 0.843137, 1)
-
-[node name="PrimaryAction" type="Button" parent="SafeMargin/Shell/Pages/HomePage/HomeCard/HomeCardVBox"]
-layout_mode = 2
-text = "Start New Scorecard"
-size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_action")
-theme_override_styles/hover = SubResource("StyleBoxFlat_action_hover")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_action")
-theme_override_font_sizes/font_size = 20
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-
-[node name="LeaderboardPage" type="VBoxContainer" parent="SafeMargin/Shell/Pages"]
+[node name="GameProfilePage" type="VBoxContainer" parent="SafeMargin/Shell/Pages" unique_id=616221433]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -251,43 +187,185 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
 
-[node name="LeaderboardCard" type="PanelContainer" parent="SafeMargin/Shell/Pages/LeaderboardPage"]
+[node name="TopBar" type="HBoxContainer" parent="SafeMargin/Shell/Pages/GameProfilePage" unique_id=1308464944]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BackToLibraryButton" type="Button" parent="SafeMargin/Shell/Pages/GameProfilePage/TopBar" unique_id=1028268200]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nav_active")
+text = "Back"
+
+[node name="ProfileCard" type="PanelContainer" parent="SafeMargin/Shell/Pages/GameProfilePage" unique_id=2137913606]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="ProfileVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/GameProfilePage/ProfileCard" unique_id=2135633787]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ProfileChip" type="Label" parent="SafeMargin/Shell/Pages/GameProfilePage/ProfileCard/ProfileVBox" unique_id=998828534]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.643137, 0.729412, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "🎲  Game Profile"
+
+[node name="ProfileTitle" type="Label" parent="SafeMargin/Shell/Pages/GameProfilePage/ProfileCard/ProfileVBox" unique_id=1010460145]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "Game Title"
+
+[node name="ProfileDescription" type="Label" parent="SafeMargin/Shell/Pages/GameProfilePage/ProfileCard/ProfileVBox" unique_id=1060163434]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
+theme_override_font_sizes/font_size = 15
+text = "Game description goes here."
+autowrap_mode = 2
+
+[node name="ModuleGrid" type="GridContainer" parent="SafeMargin/Shell/Pages/GameProfilePage" unique_id=56082876]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="RulesButton" type="Button" parent="SafeMargin/Shell/Pages/GameProfilePage/ModuleGrid" unique_id=1160699690]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_module")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_module")
+theme_override_styles/hover = SubResource("StyleBoxFlat_module_hover")
+text = "Game Rules"
+
+[node name="ScoreboardButton" type="Button" parent="SafeMargin/Shell/Pages/GameProfilePage/ModuleGrid" unique_id=2039525187]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_module")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_module")
+theme_override_styles/hover = SubResource("StyleBoxFlat_module_hover")
+text = "Scoreboard"
+
+[node name="RemixButton" type="Button" parent="SafeMargin/Shell/Pages/GameProfilePage/ModuleGrid" unique_id=1839816210]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_module")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_module")
+theme_override_styles/hover = SubResource("StyleBoxFlat_module_hover")
+text = "Remix"
+
+[node name="ModulePage" type="VBoxContainer" parent="SafeMargin/Shell/Pages" unique_id=1487352184]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="TopBar" type="HBoxContainer" parent="SafeMargin/Shell/Pages/ModulePage" unique_id=192098834]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BackToProfileButton" type="Button" parent="SafeMargin/Shell/Pages/ModulePage/TopBar" unique_id=1403195800]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nav_active")
+text = "Back to Profile"
+
+[node name="ModuleCard" type="PanelContainer" parent="SafeMargin/Shell/Pages/ModulePage" unique_id=914224746]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="ModuleVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/ModulePage/ModuleCard" unique_id=1818579138]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ModuleChip" type="Label" parent="SafeMargin/Shell/Pages/ModulePage/ModuleCard/ModuleVBox" unique_id=782275465]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.643137, 0.729412, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "🎲  Module"
+
+[node name="ModuleTitle" type="Label" parent="SafeMargin/Shell/Pages/ModulePage/ModuleCard/ModuleVBox" unique_id=1321335245]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "Module Title"
+
+[node name="ModuleDescription" type="Label" parent="SafeMargin/Shell/Pages/ModulePage/ModuleCard/ModuleVBox" unique_id=2088163183]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
+theme_override_font_sizes/font_size = 15
+text = "Module description goes here."
+autowrap_mode = 2
+
+[node name="LeaderboardPage" type="VBoxContainer" parent="SafeMargin/Shell/Pages" unique_id=2067130386]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="LeaderboardCard" type="PanelContainer" parent="SafeMargin/Shell/Pages/LeaderboardPage" unique_id=90848107]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="LeaderboardVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard"]
+[node name="LeaderboardVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard" unique_id=1271240403]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="LeaderboardTitle" type="Label" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox"]
+[node name="LeaderboardTitle" type="Label" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox" unique_id=1453576223]
 layout_mode = 2
-text = "Leaderboard"
-theme_override_font_sizes/font_size = 28
 theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "Leaderboard"
 
-[node name="LeaderboardBody" type="Label" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox"]
+[node name="LeaderboardBody" type="Label" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox" unique_id=1251389873]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
+theme_override_font_sizes/font_size = 17
 text = "Friends, score runs, and game nights will show up here later."
 autowrap_mode = 2
-theme_override_font_sizes/font_size = 17
-theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
 
-[node name="LeaderboardPlaceholder" type="PanelContainer" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox"]
+[node name="LeaderboardPlaceholder" type="PanelContainer" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox" unique_id=2058575203]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_label_card")
+theme_override_styles/panel = SubResource("StyleBoxFlat_module")
 
-[node name="LeaderboardPlaceholderLabel" type="Label" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox/LeaderboardPlaceholder"]
+[node name="LeaderboardPlaceholderLabel" type="Label" parent="SafeMargin/Shell/Pages/LeaderboardPage/LeaderboardCard/LeaderboardVBox/LeaderboardPlaceholder" unique_id=1208220399]
 layout_mode = 2
-text = "No scores yet\n\nThis is just a polished placeholder screen for now."
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 16
+text = "No scores yet
+
+This is just a polished placeholder screen for now."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-theme_override_font_sizes/font_size = 18
-theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
 
-[node name="AccountPage" type="VBoxContainer" parent="SafeMargin/Shell/Pages"]
+[node name="AccountPage" type="VBoxContainer" parent="SafeMargin/Shell/Pages" unique_id=269831729]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -297,79 +375,80 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
 
-[node name="AccountCard" type="PanelContainer" parent="SafeMargin/Shell/Pages/AccountPage"]
+[node name="AccountCard" type="PanelContainer" parent="SafeMargin/Shell/Pages/AccountPage" unique_id=1530476951]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="AccountVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard"]
+[node name="AccountVBox" type="VBoxContainer" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard" unique_id=2056819394]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="AccountTitle" type="Label" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox"]
+[node name="AccountTitle" type="Label" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox" unique_id=1669736391]
 layout_mode = 2
-text = "Account"
-theme_override_font_sizes/font_size = 28
 theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "Account"
 
-[node name="AccountBody" type="Label" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox"]
+[node name="AccountBody" type="Label" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox" unique_id=1237995642]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
+theme_override_font_sizes/font_size = 17
 text = "Profile, saved games, house rules, and settings can land here later."
 autowrap_mode = 2
-theme_override_font_sizes/font_size = 17
-theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
 
-[node name="AccountPlaceholder" type="PanelContainer" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox"]
+[node name="AccountPlaceholder" type="PanelContainer" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox" unique_id=1021997298]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_label_card")
+theme_override_styles/panel = SubResource("StyleBoxFlat_module")
 
-[node name="AccountPlaceholderLabel" type="Label" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox/AccountPlaceholder"]
+[node name="AccountPlaceholderLabel" type="Label" parent="SafeMargin/Shell/Pages/AccountPage/AccountCard/AccountVBox/AccountPlaceholder" unique_id=46881038]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 16
 text = "Account details coming soon"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-theme_override_font_sizes/font_size = 18
-theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
 
-[node name="BottomNav" type="PanelContainer" parent="SafeMargin/Shell"]
+[node name="BottomNav" type="PanelContainer" parent="SafeMargin/Shell" unique_id=2106664447]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
 
-[node name="NavRow" type="HBoxContainer" parent="SafeMargin/Shell/BottomNav"]
+[node name="NavRow" type="HBoxContainer" parent="SafeMargin/Shell/BottomNav" unique_id=745846974]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="HomeButton" type="Button" parent="SafeMargin/Shell/BottomNav/NavRow"]
+[node name="HomeButton" type="Button" parent="SafeMargin/Shell/BottomNav/NavRow" unique_id=1586769262]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Home"
-toggle_mode = true
-theme_override_styles/normal = SubResource("StyleBoxFlat_nav_active")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nav_active")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_nav_active")
-theme_override_font_sizes/font_size = 18
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_nav_active")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nav_active")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nav_active")
+toggle_mode = true
+text = "Home"
 
-[node name="LeaderboardButton" type="Button" parent="SafeMargin/Shell/BottomNav/NavRow"]
+[node name="LeaderboardButton" type="Button" parent="SafeMargin/Shell/BottomNav/NavRow" unique_id=36988605]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nav")
+toggle_mode = true
 text = "Leaderboard"
-toggle_mode = true
-theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nav")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
-theme_override_font_sizes/font_size = 18
-theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
 
-[node name="AccountButton" type="Button" parent="SafeMargin/Shell/BottomNav/NavRow"]
+[node name="AccountButton" type="Button" parent="SafeMargin/Shell/BottomNav/NavRow" unique_id=132556645]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Account"
-toggle_mode = true
-theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nav")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
-theme_override_font_sizes/font_size = 18
 theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nav")
+toggle_mode = true
+text = "Account"
