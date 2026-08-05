@@ -57,7 +57,7 @@ func _create_header() -> PanelContainer:
 	title_label.text = app_title
 	title_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	title_label.add_theme_font_size_override("font_size", 36)
+	title_label.add_theme_font_size_override("font_size", 42)  # increased for mobile
 	title_label.add_theme_color_override("font_color", UIStyles.TEXT_PRIMARY)
 	content.add_child(title_label)
 
@@ -66,7 +66,7 @@ func _create_header() -> PanelContainer:
 	subtitle_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	subtitle_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	subtitle_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	subtitle_label.add_theme_font_size_override("font_size", 15)
+	subtitle_label.add_theme_font_size_override("font_size", 18)  # increased for mobile
 	subtitle_label.add_theme_color_override("font_color", UIStyles.TEXT_MUTED)
 	content.add_child(subtitle_label)
 
@@ -91,7 +91,7 @@ func _add_nav_button(parent: HBoxContainer, page_name: String, label: String) ->
 	button.text = label
 	button.toggle_mode = true
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	button.add_theme_font_size_override("font_size", 15)
+	button.add_theme_font_size_override("font_size", 20)  # increased for mobile
 	button.pressed.connect(_show_page.bind(page_name))
 	parent.add_child(button)
 	_nav_buttons[page_name] = button
