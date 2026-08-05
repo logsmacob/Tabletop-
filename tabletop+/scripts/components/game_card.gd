@@ -9,12 +9,12 @@ signal selected(game: Dictionary)
 @export var background_color := UIStyles.CARD
 
 var _game: Dictionary = {}
-var _title_label: Label
-var _symbol_label: Label
-var _description_label: Label
+
+onready var _title_label: Label = $Title
+onready var _symbol_label: Label = $Symbol
+onready var _description_label: Label = $Description
 
 func _ready() -> void:
-	_build_layout()
 	_apply_content()
 	pressed.connect(_emit_selected)
 
@@ -27,50 +27,6 @@ func configure(game: Dictionary) -> void:
 
 	if is_node_ready():
 		_apply_content()
-
-func _build_layout() -> void:
-	custom_minimum_size = Vector2(0.0, 184.0)
-	size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	focus_mode = Control.FOCUS_ALL
-	text = ""
-	add_theme_constant_override("h_separation", 0)
-
-	var content := VBoxContainer.new()
-	content.set_anchors_preset(Control.PRESET_FULL_RECT)
-	content.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	content.add_theme_constant_override("separation", 6)
-	add_child(content)
-
-	var top_spacer := Control.new()
-	top_spacer.custom_minimum_size = Vector2(0.0, 4.0)
-	content.add_child(top_spacer)
-
-	_title_label = Label.new()
-	_title_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_title_label.add_theme_font_size_override("font_size", 19)
-	_title_label.add_theme_color_override("font_color", UIStyles.TEXT_PRIMARY)
-	content.add_child(_title_label)
-
-	_symbol_label = Label.new()
-	_symbol_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_symbol_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	_symbol_label.add_theme_font_size_override("font_size", 38)
-	_symbol_label.add_theme_color_override("font_color", UIStyles.TEXT_PRIMARY)
-	content.add_child(_symbol_label)
-
-	_description_label = Label.new()
-	_description_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_description_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_description_label.add_theme_font_size_override("font_size", 12)
-	_description_label.add_theme_color_override("font_color", UIStyles.TEXT_SECONDARY)
-	content.add_child(_description_label)
-
-	var footer := Label.new()
-	footer.text = "Tap to open"
-	footer.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	footer.add_theme_font_size_override("font_size", 13)
-	footer.add_theme_color_override("font_color", Color(0.643137, 0.729412, 1.0, 1.0))
-	content.add_child(footer)
 
 func _apply_content() -> void:
 	_title_label.text = title
