@@ -13,8 +13,18 @@ var _pages: Dictionary = {}
 var _nav_buttons: Dictionary = {}
 var _current_game: Dictionary = {}
 var _pages_container: Control
+var _ui_scale := 1.0
+
+func _compute_ui_scale() -> void:
+	# Scale relative to a 1080px design width; clamp so extremes remain usable
+	var width := get_viewport_rect().size.x
+	_ui_scale = clamp(width / 1080.0, 0.8, 1.6)
+
+func _s(value: int) -> int:
+	return int(value * _ui_scale)
 
 func _ready() -> void:
+	_compute_ui_scale()
 	_build_app_shell()
 	_create_screens()
 	_show_page("home")
@@ -57,7 +67,7 @@ func _create_header() -> PanelContainer:
 	title_label.text = app_title
 	title_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	title_label.add_theme_font_size_override("font_size", 42)  # increased for mobile
+	title_label.add_theme_font_size_override("font_size", _s(42))  # scaled for device
 	title_label.add_theme_color_override("font_color", UIStyles.TEXT_PRIMARY)
 	content.add_child(title_label)
 
@@ -66,7 +76,7 @@ func _create_header() -> PanelContainer:
 	subtitle_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	subtitle_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	subtitle_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	subtitle_label.add_theme_font_size_override("font_size", 18)  # increased for mobile
+	subtitle_label.add_theme_font_size_override("font_size", _s(18))  # scaled for device
 	subtitle_label.add_theme_color_override("font_color", UIStyles.TEXT_MUTED)
 	content.add_child(subtitle_label)
 
@@ -91,7 +101,7 @@ func _add_nav_button(parent: HBoxContainer, page_name: String, label: String) ->
 	button.text = label
 	button.toggle_mode = true
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	button.add_theme_font_size_override("font_size", 20)  # increased for mobile
+	button.add_theme_font_size_override("font_size", _s(20))  # scaled for device
 	button.pressed.connect(_show_page.bind(page_name))
 	parent.add_child(button)
 	_nav_buttons[page_name] = button
