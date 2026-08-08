@@ -43,7 +43,7 @@ grow_vertical = 2
 theme_override_constants/margin_left = 42
 theme_override_constants/margin_top = 42
 theme_override_constants/margin_right = 42
-theme_override_constants/margin_bottom = 42
+theme_override_constants/margin_bottom = 80
 
 [node name="Shell" type="VBoxContainer" parent="SafeMargin" unique_id=1319148860]
 layout_mode = 2
