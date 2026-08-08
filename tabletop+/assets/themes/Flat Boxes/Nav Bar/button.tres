@@ -1,0 +1,53 @@
+[gd_resource type="Theme" format=3 uid="uid://bc8cxsdwawv8q"]
+
+[ext_resource type="StyleBox" uid="uid://c5cyse8arj5lr" path="res://assets/themes/Flat Boxes/Game Card/Normal.tres" id="3_g5ugt"]
+[ext_resource type="FontFile" uid="uid://cnci0773b7q4d" path="res://assets/fonts/pixeloid-font/PixeloidSans-lxa3y.ttf" id="4_x0jm8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmh1q"]
+bg_color = Color(1, 1, 1, 0.20784314)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+shadow_color = Color(0, 0, 0, 0.29411766)
+shadow_size = 1
+shadow_offset = Vector2(0, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r158r"]
+bg_color = Color(1, 1, 1, 0)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7490196, 0.7529412, 0.7529412, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4bdp"]
+bg_color = Color(0.9372549, 0.5137255, 0.32941177, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.101960786, 0.12156863, 0.16862746, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[resource]
+default_font = ExtResource("4_x0jm8")
+default_font_size = 26
+Button/styles/hover = SubResource("StyleBoxFlat_gmh1q")
+Button/styles/normal = SubResource("StyleBoxFlat_r158r")
+Button/styles/pressed = SubResource("StyleBoxFlat_r4bdp")
+PanelContainer/styles/panel = ExtResource("3_g5ugt")

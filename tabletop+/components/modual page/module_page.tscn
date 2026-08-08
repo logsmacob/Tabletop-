@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://qhplbpp70p4q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nav"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0901961, 0.105882, 0.145098, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nav_active"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.180392, 0.278431, 0.54902, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+bg_color = Color(0.101961, 0.121569, 0.168627, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="ModulePage" type="VBoxContainer" unique_id=2072353743]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="TopBar" type="HBoxContainer" parent="." unique_id=1529036503]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BackToProfileButton" type="Button" parent="TopBar" unique_id=1821236751]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nav_active")
+text = "Back to Profile"
+
+[node name="ModuleCard" type="PanelContainer" parent="." unique_id=648349318]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="ModuleVBox" type="VBoxContainer" parent="ModuleCard" unique_id=1448573999]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ModuleChip" type="Label" parent="ModuleCard/ModuleVBox" unique_id=1097148616]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.643137, 0.729412, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "🎲  Module"
+
+[node name="ModuleTitle" type="Label" parent="ModuleCard/ModuleVBox" unique_id=880563892]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "Module Title"
+
+[node name="ModuleDescription" type="Label" parent="ModuleCard/ModuleVBox" unique_id=2065499521]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
+theme_override_font_sizes/font_size = 15
+text = "Module description goes here."
+autowrap_mode = 2

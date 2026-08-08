@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://ch0j0hwximujt"]
+
+[ext_resource type="Theme" uid="uid://blu0rpydccxm" path="res://assets/themes/Flat Boxes/Game Card/Game Card.tres" id="1_g4ga8"]
+[ext_resource type="Script" uid="uid://bnjxkrmo6i0jq" path="res://components/game card/game_card.gd" id="2_qfrrj"]
+[ext_resource type="StyleBox" uid="uid://5lapv45o1j0i" path="res://assets/themes/Flat Boxes/Game Card/Footer.tres" id="3_031l5"]
+[ext_resource type="Theme" uid="uid://j3tu6rvgun06" path="res://assets/themes/H1.tres" id="4_2wcy3"]
+[ext_resource type="Theme" uid="uid://c1d3u5d40xfep" path="res://assets/themes/Normal.tres" id="5_ijqmu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0k6p6"]
+bg_color = Color(1, 1, 1, 0)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.1764706, 0.19215687, 0.25882354, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 1
+
+[node name="GameCard" type="Button" unique_id=1078555366]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(400, 360)
+offset_right = 256.0
+offset_bottom = 184.0
+size_flags_horizontal = 3
+focus_mode = 1
+theme = ExtResource("1_g4ga8")
+script = ExtResource("2_qfrrj")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1996625562]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("3_031l5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1957052279]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=896344431]
+layout_mode = 2
+theme = ExtResource("4_2wcy3")
+text = "Hello"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1420827923]
+layout_mode = 2
+theme = ExtResource("5_ijqmu")
+text = "Discription"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=658052701]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("5_ijqmu")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0k6p6")

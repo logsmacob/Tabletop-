@@ -52,18 +52,18 @@ func _build_layout() -> void:
 	_profile_card.add_child(profile_content)
 
 	_chip_label = Label.new()
-	_chip_label.add_theme_font_size_override("font_size", 16)
+	_chip_label.add_theme_font_size_override("font_size", 26)
 	_chip_label.add_theme_color_override("font_color", UIStyles.TEXT_PRIMARY)
 	profile_content.add_child(_chip_label)
 
 	_title_label = Label.new()
-	_title_label.add_theme_font_size_override("font_size", 26)
+	_title_label.add_theme_font_size_override("font_size", 42)
 	_title_label.add_theme_color_override("font_color", UIStyles.TEXT_PRIMARY)
 	profile_content.add_child(_title_label)
 
 	_description_label = Label.new()
 	_description_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_description_label.add_theme_font_size_override("font_size", 15)
+	_description_label.add_theme_font_size_override("font_size", 26)
 	_description_label.add_theme_color_override("font_color", UIStyles.TEXT_SECONDARY)
 	profile_content.add_child(_description_label)
 
@@ -83,7 +83,7 @@ func _create_module_button(label: String, module_name: String) -> Button:
 	button.text = label
 	button.custom_minimum_size = Vector2(0.0, 92.0)
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	button.add_theme_font_size_override("font_size", 17)
+	button.add_theme_font_size_override("font_size", 26)
 	button.add_theme_stylebox_override("normal", UIStyles.round_style(UIStyles.MODULE, 20))
 	button.add_theme_stylebox_override("hover", UIStyles.round_style(UIStyles.MODULE_HOVER, 20))
 	button.add_theme_stylebox_override("pressed", UIStyles.round_style(UIStyles.MODULE, 20))

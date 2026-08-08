@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://xgcrw4ii0bs6"]
+
+[ext_resource type="Theme" uid="uid://c1d3u5d40xfep" path="res://assets/themes/Normal.tres" id="1_do4ay"]
+[ext_resource type="StyleBox" uid="uid://chg46jkrgrkfj" path="res://assets/themes/Flat Boxes/Nav Bar/Background.tres" id="2_kk26x"]
+[ext_resource type="Script" uid="uid://cvbgf7yal6miu" path="res://components/screens/bottom_nav/bottom_nav.gd" id="3_kk26x"]
+[ext_resource type="Theme" uid="uid://bc8cxsdwawv8q" path="res://assets/themes/Flat Boxes/Nav Bar/button.tres" id="3_kwyjy"]
+
+[node name="BottomNav" type="PanelContainer" unique_id=1135921552]
+custom_minimum_size = Vector2(0, 100)
+theme = ExtResource("1_do4ay")
+theme_override_styles/panel = ExtResource("2_kk26x")
+script = ExtResource("3_kk26x")
+
+[node name="NavRow" type="HBoxContainer" parent="." unique_id=1621118516]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="HomeButton" type="Button" parent="NavRow" unique_id=1299369488]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_kwyjy")
+toggle_mode = true
+button_pressed = true
+text = "Home"
+
+[node name="LeaderboardButton" type="Button" parent="NavRow" unique_id=1773896781]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_kwyjy")
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+toggle_mode = true
+text = "Leaderboard"
+
+[node name="AccountButton" type="Button" parent="NavRow" unique_id=769172385]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_kwyjy")
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+toggle_mode = true
+text = "Account"
