@@ -57,7 +57,7 @@ size_flags_vertical = 3
 [node name="Home Page" parent="SafeMargin/Shell/Pages" unique_id=723817336 instance=ExtResource("1_ijk14")]
 layout_mode = 1
 
-[node name="LeaderboardPage" parent="SafeMargin/Shell/Pages" unique_id=2003599912 instance=ExtResource("3_lop4f")]
+[node name="StatsPage" parent="SafeMargin/Shell/Pages" unique_id=2003599912 instance=ExtResource("3_lop4f")]
 visible = false
 layout_mode = 1
 
@@ -67,3 +67,4 @@ layout_mode = 1
 
 [node name="BottomNav" parent="SafeMargin/Shell" unique_id=1135921552 instance=ExtResource("2_7fmlx")]
 layout_mode = 2
+size_flags_horizontal = 4
