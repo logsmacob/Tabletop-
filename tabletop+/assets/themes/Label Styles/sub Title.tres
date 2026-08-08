@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://b5apu5xy2op1r"]
+
+[ext_resource type="FontFile" uid="uid://dd40cf6yss1mq" path="res://assets/fonts/pixeloid-font/PixeloidMono-nAOpP.ttf" id="1_kaxrp"]
+
+[resource]
+font = ExtResource("1_kaxrp")
+font_size = 42
+font_color = Color(0.9372549, 0.5137255, 0.32941177, 1)

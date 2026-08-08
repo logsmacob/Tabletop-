@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://rs2rfhwbtt07"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nav"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0901961, 0.105882, 0.145098, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nav_active"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.180392, 0.278431, 0.54902, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+bg_color = Color(0.101961, 0.121569, 0.168627, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_module"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.137255, 0.156863, 0.211765, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_module_hover"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.180392, 0.211765, 0.278431, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="GameProfilePage" type="VBoxContainer" unique_id=1199415951]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="TopBar" type="HBoxContainer" parent="." unique_id=1650947458]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BackToLibraryButton" type="Button" parent="TopBar" unique_id=1375622871]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.878431, 0.905882, 0.94902, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_nav")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nav")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nav_active")
+text = "Back"
+
+[node name="ProfileCard" type="PanelContainer" parent="." unique_id=350428203]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="ProfileVBox" type="VBoxContainer" parent="ProfileCard" unique_id=14252089]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ProfileChip" type="Label" parent="ProfileCard/ProfileVBox" unique_id=512002961]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.643137, 0.729412, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "🎲  Game Profile"
+
+[node name="ProfileTitle" type="Label" parent="ProfileCard/ProfileVBox" unique_id=1565860090]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "Game Title"
+
+[node name="ProfileDescription" type="Label" parent="ProfileCard/ProfileVBox" unique_id=1581666663]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.835294, 0.901961, 1)
+theme_override_font_sizes/font_size = 15
+text = "Game description goes here."
+autowrap_mode = 2
+
+[node name="ModuleGrid" type="GridContainer" parent="." unique_id=1323618153]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="RulesButton" type="Button" parent="ModuleGrid" unique_id=766212619]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_module")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_module")
+theme_override_styles/hover = SubResource("StyleBoxFlat_module_hover")
+text = "Game Rules"
+
+[node name="ScoreboardButton" type="Button" parent="ModuleGrid" unique_id=1028740700]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_module")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_module")
+theme_override_styles/hover = SubResource("StyleBoxFlat_module_hover")
+text = "Scoreboard"
+
+[node name="RemixButton" type="Button" parent="ModuleGrid" unique_id=436796914]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_module")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_module")
+theme_override_styles/hover = SubResource("StyleBoxFlat_module_hover")
+text = "Remix"

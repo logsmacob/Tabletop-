@@ -154,8 +154,8 @@ func _open_module(module_name: String) -> void:
 	_show_page("module")
 
 func _show_page(page_name: String) -> void:
-	for name in _pages.keys():
-		_pages[name].visible = name == page_name
+	for _name in _pages.keys():
+		_pages[_name].visible = _name == page_name
 
 	_update_bottom_nav(page_name)
 
@@ -164,9 +164,9 @@ func _update_bottom_nav(page_name: String) -> void:
 	if page_name == "game_profile" or page_name == "module":
 		active_nav_page = "home"
 
-	for name in _nav_buttons.keys():
-		var button: Button = _nav_buttons[name]
-		var is_active: bool = name == active_nav_page
+	for _name in _nav_buttons.keys():
+		var button: Button = _nav_buttons[_name]
+		var is_active: bool = _name == active_nav_page
 		var style_color: Color = UIStyles.NAV_ACTIVE if is_active else UIStyles.PANEL
 
 		button.button_pressed = is_active

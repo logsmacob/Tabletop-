@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://j3tu6rvgun06"]
+
+[ext_resource type="FontFile" uid="uid://bfmc8ldjpblsv" path="res://assets/fonts/pixeloid-font/PixeloidSansBold-1jpBg.ttf" id="1_vou8e"]
+
+[resource]
+default_font = ExtResource("1_vou8e")
+default_font_size = 42

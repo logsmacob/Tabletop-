@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://c1d3u5d40xfep"]
+
+[ext_resource type="FontFile" uid="uid://cnci0773b7q4d" path="res://assets/fonts/pixeloid-font/PixeloidSans-lxa3y.ttf" id="1_yarv3"]
+[ext_resource type="StyleBox" uid="uid://offdl333rf0v" path="res://assets/themes/Flat Boxes/Game Card/Hover.tres" id="1_yc2o0"]
+[ext_resource type="StyleBox" uid="uid://c5cyse8arj5lr" path="res://assets/themes/Flat Boxes/Game Card/Normal.tres" id="2_kl3pf"]
+[ext_resource type="StyleBox" uid="uid://bore23ikykw6v" path="res://assets/themes/Flat Boxes/Game Card/Pressed.tres" id="3_kl3pf"]
+
+[resource]
+default_font = ExtResource("1_yarv3")
+default_font_size = 26
+Button/styles/hover = ExtResource("1_yc2o0")
+Button/styles/normal = ExtResource("2_kl3pf")
+Button/styles/pressed = ExtResource("3_kl3pf")
+PanelContainer/styles/panel = ExtResource("2_kl3pf")

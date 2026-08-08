@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://csrt8ufjh63ih"]
+
+[ext_resource type="Theme" uid="uid://j3tu6rvgun06" path="res://assets/themes/H1.tres" id="1_5bvlf"]
+[ext_resource type="LabelSettings" uid="uid://gbdq8kua6txu" path="res://assets/themes/Label Styles/Title.tres" id="2_ffckb"]
+[ext_resource type="PackedScene" uid="uid://ch0j0hwximujt" path="res://components/game card/game_card.tscn" id="2_q5ccc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bvlf"]
+bg_color = Color(0.9372549, 0.5137255, 0.32941177, 1)
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+expand_margin_left = 42.0
+expand_margin_top = 100.0
+expand_margin_right = 42.0
+
+[node name="Home Page" type="Control" unique_id=723817336]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HomePage" type="VBoxContainer" parent="." unique_id=1685284811]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Header" type="PanelContainer" parent="HomePage" unique_id=739455382]
+custom_minimum_size = Vector2(0, 186)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5bvlf")
+
+[node name="HeaderVBox" type="VBoxContainer" parent="HomePage/Header" unique_id=1919425712]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Title" type="Label" parent="HomePage/Header/HeaderVBox" unique_id=1631543412]
+layout_mode = 2
+theme = ExtResource("1_5bvlf")
+theme_override_colors/font_color = Color(0.968627, 0.976471, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "TABLETOP+"
+label_settings = ExtResource("2_ffckb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HomeScroll" type="ScrollContainer" parent="HomePage" unique_id=732950725]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="HomeGrid" type="GridContainer" parent="HomePage/HomeScroll" unique_id=2056172536]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 48
+columns = 2
+
+[node name="Bank" parent="HomePage/HomeScroll/HomeGrid" unique_id=1078555366 instance=ExtResource("2_q5ccc")]
+self_modulate = Color(0.91, 0.19109999, 0.19109999, 1)
+layout_mode = 2
+
+[node name="Flip 7" parent="HomePage/HomeScroll/HomeGrid" unique_id=1660172662 instance=ExtResource("2_q5ccc")]
+self_modulate = Color(0.1615, 0.45985, 0.85, 1)
+layout_mode = 2

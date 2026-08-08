@@ -1,0 +1,3 @@
+Color Pallet
+[Darker, Dark, Mid, Light, Accesnt]
+["#13151c", "#2d3142","#bfc0c0","#ffffff","#ef8354"]
