@@ -1,6 +1,6 @@
 extends PanelContainer
 
-@onready var nav_row: HBoxContainer = $NavRow
+@onready var nav_row: HBoxContainer = $MarginContainer/NavRow
 @onready var button_list: Array[Button] = []
 
 signal screen_chosen(index: int)
