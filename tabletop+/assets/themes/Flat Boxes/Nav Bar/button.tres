@@ -10,10 +10,10 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 64
-corner_radius_top_right = 64
-corner_radius_bottom_right = 64
-corner_radius_bottom_left = 64
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 shadow_color = Color(0, 0, 0, 0.29411766)
 shadow_size = 1
 shadow_offset = Vector2(0, 16)
@@ -26,10 +26,10 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 border_color = Color(0.7490196, 0.7529412, 0.7529412, 1)
-corner_radius_top_left = 64
-corner_radius_top_right = 64
-corner_radius_bottom_right = 64
-corner_radius_bottom_left = 64
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 shadow_size = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4bdp"]
@@ -39,10 +39,10 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 border_color = Color(0.101960786, 0.12156863, 0.16862746, 1)
-corner_radius_top_left = 64
-corner_radius_top_right = 64
-corner_radius_bottom_right = 64
-corner_radius_bottom_left = 64
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [resource]
 default_font = ExtResource("4_x0jm8")
